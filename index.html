@@ -123,17 +123,16 @@
           <h2 class="section-title advantages-title">
             Чому люди <span class="accent">обирають нас </span>
           </h2>
-          <!--акцентом в спані задати колір другій частині заголовку-->
-          <ul class="list format-list">
+          <ul class="list advantages-flex-list">
             <li class="advantages-list">
               <article class="border-card">
                 <!--remove the class after true card border-->
                 <svg class="advantages-icons" width="48" height="48">
                   <use href="./images/svg-icons.svg#icon-flower-icon"></use>
                 </svg>
-                <p>
-                  Всі наші косметологи мають вищу медичну освіту та стаж роботи
-                  від 5 років
+                <p class="advantages-text">
+                  Всі наші косметологи мають вищу медичну освіту <br />
+                  та стаж роботи від 5 років
                 </p>
               </article>
             </li>
@@ -144,18 +143,18 @@
                     href="./images/svg-icons.svg#icon-cosmetic-products-icon"
                   ></use>
                 </svg>
-                <p>
+                <p class="advantages-text">
                   Використовуємо тільки професійне обладнання та косметику,
                   перевірену часом
                 </p>
               </article>
             </li>
-            <li class="advantages-list">
+            <li>
               <article class="border-card">
                 <svg class="advantages-icons" width="48" height="48">
                   <use href="./images/svg-icons.svg#icon-crown-icon"></use>
                 </svg>
-                <p>
+                <p class="advantages-text">
                   Наша мета - підкреслити переваги та приховати недоліки, а не
                   переробити
                 </p>
@@ -170,28 +169,35 @@
           <h2 class="section-title procedure-title">
             Наші <span class="accent">процедури</span>
           </h2>
-          <button class="carousel-button" type="button">
-            <svg class="carousel-arrow" width="20" height="20">
-              <use href="./images/svg-icons.svg#icon-arrow-left2"></use>
-            </svg>
-          </button>
-          <ul class="list procedure-cards">
-            <li>
-              <article>
-                <img src="./images/face-1.jpg" alt="Маска для обличчя" />
-              </article>
-            </li>
-            <li>
-              <article>
-                <img src="./images/face-2.jpg" alt="Ін'єкції" />
-              </article>
-            </li>
-            <li>
-              <article>
-                <img src="./images/face-3.jpg" alt="Очищення обличчя" />
-              </article>
-            </li>
-          </ul>
+          <div class="procedure-cards-carousel">
+            <button class="carousel-button" type="button">
+              <svg class="carousel-arrow" width="20" height="20">
+                <use href="./images/svg-icons.svg#icon-arrow-left2"></use>
+              </svg>
+            </button>
+            <ul class="list procedure-cards">
+              <li>
+                <article>
+                  <img src="./images/face-1.jpg" alt="Маска для обличчя" />
+                </article>
+              </li>
+              <li>
+                <article>
+                  <img src="./images/face-2.jpg" alt="Ін'єкції" />
+                </article>
+              </li>
+              <li>
+                <article>
+                  <img src="./images/face-3.jpg" alt="Очищення обличчя" />
+                </article>
+              </li>
+            </ul>
+            <button class="carousel-button" type="button">
+              <svg class="carousel-arrow" width="20" height="20">
+                <use href="./images/svg-icons.svg#icon-arrow-left2"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <!--Секція контакти-->
@@ -200,16 +206,24 @@
           <h2 class="section-title contact-title">
             Як нас <span class="accent">знайти</span>
           </h2>
-          <!--Акцент-->
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1638751904716!2d30.48636259440738!3d50.45667301367767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1699806703746!5m2!1suk!2sua"
-            width="603"
-            height="595"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          >
-          </iframe>
+          <div class="contacts-container">
+            <div class="contact-form">
+              <p class="call-request">
+                Запишіться <span class="accent">безкоштовно</span> та отримайте
+                подарунок
+              </p>
+            </div>
+            <iframe
+              class="contact-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1638751904716!2d30.48636259440738!3d50.45667301367767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1699806703746!5m2!1suk!2sua"
+              width="605"
+              height="481"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
         </div>
       </section>
     </main>
@@ -217,9 +231,11 @@
     <footer class="footer-section">
       <div class="container footer-container">
         <nav class="footer-nav">
-          <a href="#">
-            <img src="./images/logo.svg" alt="Логотип BZ" />
-          </a>
+          <div class="footer-logo">
+            <a href="#">
+              <img src="./images/logo.svg" alt="Логотип BZ" />
+            </a>
+          </div>
           <ul class="list footer-link-list">
             <li>
               <a class="footer-link" href="#about-us-section">Про нас</a>
@@ -246,7 +262,7 @@
             </li>
             <li>
               <a class="address-link" href="mailto:shopbakery@gmail.com"
-                >shopbakery@gmail.com</a
+                >beautyzone@gmail.com</a
               >
             </li>
             <li>
@@ -255,29 +271,33 @@
                 href="https://maps.app.goo.gl/SvD66bGZupn16T4t5"
                 target="_blank"
               >
-                Україна, м. Київ, вул. Січових Стрільців 54</a
+                Україна, м. Київ, <br />вул. Тараса Шевченка 5</a
               >
             </li>
           </ul>
           <ul class="list footer-icon-list">
-            <li class="footer-icons">
+            <li>
               <a href="#">
-                <svg width="42px" height="42px">
-                  <use href="./images/svg-icons.svg#icon-phone_logo"></use>
+                <svg class="footer-icons" width="42px" height="42px">
+                  <use
+                    href="./images/svg-icons.svg#icon-telefon-icon-footer"
+                  ></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="#">
                 <svg class="footer-icons" width="42px" height="42px">
-                  <use href="./images/svg-icons.svg#icon-fc_logo"></use>
+                  <use href="./images/svg-icons.svg#icon-fb--icon-footer"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="#">
                 <svg class="footer-icons" width="42px" height="42px">
-                  <use href="./images/svg-icons.svg#icon-instat_logo"></use>
+                  <use
+                    href="./images/svg-icons.svg#icon-insta-icon-footer"
+                  ></use>
                 </svg>
               </a>
             </li>
